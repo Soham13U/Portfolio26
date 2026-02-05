@@ -1,0 +1,221 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.intro {
+  margin-bottom: 1rem;
+}
+
+.photoContainer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 0;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+@media (max-width: 768px) {
+  .photo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.name {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.title {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  color: var(--text-secondary);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.bio {
+  font-size: clamp(0.9375rem, 1.2vw, 1.0625rem);
+  line-height: 1.8;
+  color: var(--text-primary);
+  font-weight: 300;
+  max-width: 65ch;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.infoItem {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+.infoLabel {
+  font-weight: 400;
+  min-width: 80px;
+  color: var(--text-tertiary);
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.skillItem {
+  font-size: clamp(0.6875rem, 1vw, 0.8125rem);
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.separator {
+  font-size: clamp(0.6875rem, 1vw, 0.8125rem);
+  color: var(--text-tertiary);
+  opacity: 0.5;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.experienceItem {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2.5rem;
+}
+
+.experienceItem:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.experienceHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.role {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.period {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+  font-weight: 400;
+  white-space: nowrap;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.company {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.description {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  font-weight: 300;
+  max-width: 65ch;
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.education:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.degree {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.university {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.year {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+@media (max-width: 768px) {
+  .about {
+    gap: 3rem;
+  }
+
+  .experienceHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .infoItem {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .infoLabel {
+    min-width: auto;
+  }
+}

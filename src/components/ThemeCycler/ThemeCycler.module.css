@@ -1,0 +1,54 @@
+.cycler {
+  position: relative;
+  width: auto;
+  height: auto;
+  border: none;
+  background: transparent;
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  cursor: none;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 100;
+  padding: 0.5rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(0.6875rem, 1vw, 0.8125rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.cycler:hover {
+  color: var(--text-secondary);
+  opacity: 1;
+}
+
+.themeLabel {
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.colorDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cycler:hover .colorDot {
+  border-color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .cycler {
+    font-size: clamp(0.625rem, 2vw, 0.75rem);
+  }
+
+  .colorDot {
+    width: 5px;
+    height: 5px;
+  }
+}

@@ -1,0 +1,234 @@
+/* Modern Awwwards-style Font Pairing */
+/* Display font for headings - Space Grotesk (geometric, modern, popular on Awwwards) */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* Body font - DM Sans (clean, highly readable, modern) */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Monospace for UI elements - JetBrains Mono (technical, clean) */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Terracotta Warm - Default */
+  --bg-primary: #fef9f5;
+  --bg-secondary: #faf5f0;
+  --text-primary: #2d1810;
+  --text-secondary: #8b6f5e;
+  --text-tertiary: #b89a8a;
+  --border-color: #e8ddd4;
+  --accent: #d97757;
+  --accent-light: #f4a88a;
+  --hover-bg: #f5ede5;
+  --shadow: rgba(217, 119, 87, 0.08);
+  --shadow-hover: rgba(217, 119, 87, 0.15);
+}
+
+/* Monotone Theme - Grayscale neutral */
+[data-theme="monotone"] {
+  --bg-primary: #fafafa;
+  --bg-secondary: #f5f5f5;
+  --text-primary: #1a1a1a;
+  --text-secondary: #6b6b6b;
+  --text-tertiary: #9a9a9a;
+  --border-color: #e0e0e0;
+  --accent: #808080;
+  --accent-light: #a0a0a0;
+  --hover-bg: #f0f0f0;
+  --shadow: rgba(0, 0, 0, 0.05);
+  --shadow-hover: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Theme */
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #242424;
+  --text-primary: #e8e8e8;
+  --text-secondary: #b0b0b0;
+  --text-tertiary: #808080;
+  --border-color: #3a3a3a;
+  --accent: #ffffff;
+  --accent-light: #d0d0d0;
+  --hover-bg: #2a2a2a;
+  --shadow: rgba(255, 255, 255, 0.05);
+  --shadow-hover: rgba(255, 255, 255, 0.1);
+}
+
+/* Light Theme - Warm beige */
+[data-theme="light"] {
+  --bg-primary: #F0EAD6;
+  --bg-secondary: #e8ddd4;
+  --text-primary: #2D2A26;
+  --text-secondary: #8C7B6A;
+  --text-tertiary: #a8a095;
+  --border-color: #d4c9b8;
+  --accent: #d97757;
+  --accent-light: #e8a085;
+  --hover-bg: #e8ddd4;
+  --shadow: rgba(217, 119, 87, 0.08);
+  --shadow-hover: rgba(217, 119, 87, 0.15);
+}
+
+/* Burgundy Theme - Dark warm */
+[data-theme="burgundy"] {
+  --bg-primary: #27262b;
+  --bg-secondary: #2d2c31;
+  --text-primary: #e4d9bf;
+  --text-secondary: #d4c4a5;
+  --text-tertiary: #a8987f;
+  --border-color: #4a3d38;
+  --accent: #bc3e32;
+  --accent-light: #d15245;
+  --hover-bg: #3a3438;
+  --shadow: rgba(188, 62, 50, 0.08);
+  --shadow-hover: rgba(188, 62, 50, 0.15);
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  transition: background-color 0.6s cubic-bezier(0.22, 1, 0.36, 1), 
+              color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Subtle Custom Cursor */
+.cursor {
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease-out, opacity 0.15s ease;
+  mix-blend-mode: difference;
+  opacity: 0.8;
+}
+
+.cursor-follower {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  opacity: 0.5;
+}
+
+.cursor.hover {
+  transform: scale(1.8);
+  border-color: var(--accent-light);
+}
+
+.cursor.click {
+  transform: scale(0.7);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-tertiary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Awwwards Typography Effects */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes letterReveal {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle Background Gradient Animation */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.backgroundGradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(
+    circle at 20% 50%,
+    rgba(var(--accent-rgb, 217, 119, 87), 0.03) 0%,
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 80% 80%,
+    rgba(var(--accent-rgb, 217, 119, 87), 0.02) 0%,
+    transparent 50%
+  );
+  background-size: 200% 200%;
+  animation: gradientShift 25s ease infinite;
+  pointer-events: none;
+  opacity: 0.6;
+}

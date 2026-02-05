@@ -1,0 +1,185 @@
+.playground {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.playgroundCard {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.playgroundIndex {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-weight: 400;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.playgroundImage {
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.playgroundImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.playgroundCard:hover .playgroundImage img {
+  transform: scale(1.02);
+}
+
+.playgroundCard:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.playgroundCard:hover {
+  transform: translateY(-4px);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cardTitle {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  flex: 1;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.statusBadge {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: var(--bg-secondary);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.statusBadge:hover {
+  background: var(--hover-bg);
+}
+
+.cardDescription {
+  font-size: clamp(0.9375rem, 1.2vw, 1.0625rem);
+  line-height: 1.8;
+  color: var(--text-secondary);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  max-width: 70ch;
+}
+
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.techItem {
+  font-size: clamp(0.6875rem, 1vw, 0.8125rem);
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.separator {
+  font-size: clamp(0.6875rem, 1vw, 0.8125rem);
+  color: var(--text-tertiary);
+  opacity: 0.5;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.projectLink {
+  font-size: clamp(0.6875rem, 1vw, 0.8125rem);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: none;
+}
+
+.projectLink:hover {
+  color: var(--accent);
+}
+
+.projectLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.projectLink:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .playground {
+    gap: 2.5rem;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cardFooter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

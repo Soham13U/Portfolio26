@@ -1,0 +1,151 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 800px;
+  max-height: 85vh;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  cursor: move;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  cursor: grab;
+}
+
+.header:active {
+  cursor: grabbing;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+}
+
+.description {
+  font-size: 0.8125rem;
+  font-weight: 300;
+  color: var(--text-tertiary);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  color: var(--text-secondary);
+  border-radius: 2px;
+}
+
+.closeButton:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+  transform: rotate(90deg);
+}
+
+.closeButton:active {
+  transform: rotate(90deg) scale(0.95);
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 2.5rem;
+  background: var(--bg-primary);
+}
+
+.content::-webkit-scrollbar {
+  width: 1px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: var(--text-tertiary);
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 95%;
+    max-height: 90vh;
+    top: 50%;
+    left: 50%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .title {
+    font-size: 0.8rem;
+  }
+
+  .content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    width: 98%;
+    max-height: 95vh;
+  }
+
+  .header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+}

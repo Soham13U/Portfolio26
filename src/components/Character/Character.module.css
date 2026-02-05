@@ -1,0 +1,258 @@
+.character {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  color: var(--text-secondary);
+}
+
+.svgCharacter {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+
+/* SVG Elements - thin lines, minimalist */
+.head {
+  stroke: currentColor;
+  fill: none;
+  transition: all 0.3s ease;
+}
+
+.eyes {
+  transition: all 0.3s ease;
+}
+
+.eyes circle,
+.eyes ellipse {
+  stroke: currentColor;
+  fill: none;
+  transition: all 0.3s ease;
+}
+
+.mouth {
+  transition: all 0.3s ease;
+}
+
+.mouth path,
+.mouth line,
+.mouth ellipse {
+  stroke: currentColor;
+  fill: none;
+  transition: all 0.3s ease;
+}
+
+/* Expression: Idle */
+.character.idle .eyes circle {
+  animation: blink 3s infinite;
+}
+
+/* Expression: Curious */
+.character.curious .eyes {
+  transform: translateY(-2px);
+}
+
+.character.curious .eyes ellipse {
+  animation: blink 2.5s infinite;
+}
+
+/* Expression: Happy */
+.character.happy .eyes circle {
+  animation: blink 2s infinite;
+}
+
+/* Expression: Thinking */
+.character.thinking .eyes {
+  transform: translateY(2px);
+}
+
+.character.thinking .eyes ellipse {
+  animation: blink 3.5s infinite;
+}
+
+.character.thinking {
+  animation: think 2s ease-in-out infinite;
+}
+
+/* Expression: Excited */
+.character.excited .eyes circle {
+  animation: blink 1s infinite;
+}
+
+.character.excited {
+  animation: bounce 0.6s ease-in-out infinite;
+}
+
+/* Expression: Scrolling */
+.character.scrolling .eyes {
+  animation: lookAround 2s ease-in-out infinite;
+}
+
+.character.scrolling .eyes ellipse {
+  animation: blink 2s infinite;
+}
+
+.character.scrolling {
+  animation: scrollBounce 1.2s ease-in-out infinite;
+}
+
+/* Expression: About (Reading/Studying) */
+.character.about .eyes ellipse {
+  animation: blink 3s infinite;
+}
+
+.character.about {
+  animation: read 2.5s ease-in-out infinite;
+}
+
+/* Expression: Projects (Excited/Impressed) */
+.character.projects .eyes circle {
+  animation: blink 1.5s infinite;
+}
+
+.character.projects {
+  animation: impressed 1.8s ease-in-out infinite;
+}
+
+/* Expression: Playground (Playful/Creative) */
+.character.playground .eyes {
+  animation: playfulEyes 2s ease-in-out infinite;
+}
+
+.character.playground .eyes circle {
+  animation: blink 2.2s infinite;
+}
+
+.character.playground {
+  animation: playful 1.5s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes blink {
+  0%, 90%, 100% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes think {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.05);
+  }
+}
+
+@keyframes lookAround {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+}
+
+@keyframes scrollBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes read {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-1px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-1px) rotate(1deg);
+  }
+}
+
+@keyframes impressed {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05) rotate(2deg);
+  }
+  75% {
+    transform: scale(1.05) rotate(-2deg);
+  }
+}
+
+@keyframes playfulEyes {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+}
+
+@keyframes playful {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-2px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-1px) rotate(-2deg);
+  }
+  75% {
+    transform: translateY(-2px) rotate(2deg);
+  }
+}
+
+.animating {
+  animation: pop 0.3s ease-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive - keep fixed size but scale down on mobile */
+@media (max-width: 768px) {
+  .svgCharacter {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .svgCharacter {
+    width: 50px;
+    height: 50px;
+  }
+}
+
