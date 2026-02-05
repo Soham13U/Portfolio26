@@ -6,5 +6,5 @@ export default defineConfig({
   plugins: [react()],
   // Base path for GitHub Pages - change 'cur-port2' to your repository name
   // If your repo is 'username.github.io', use base: '/'
-  base: process.env.GITHUB_PAGES ? '/cur-port2/' : '/',
+  base: process.env.GITHUB_PAGES ? '/Portfolio26/' : '/',
 })
