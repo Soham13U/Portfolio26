@@ -29,7 +29,7 @@ const ProjectCard = ({ project, index }) => {
       data-project-index={index}
     >
       <div className={styles.projectImage}>
-        <img src={project.image} alt={project.title} />
+        <img src={`${import.meta.env.BASE_URL}${project.image.replace(/^\//, '')}`} alt={project.title} />
       </div>
       <div className={styles.projectContent}>
         <div className={styles.projectHeader}>
@@ -39,7 +39,11 @@ const ProjectCard = ({ project, index }) => {
           <h3 className={styles.projectTitle}>{project.title}</h3>
           <span className={styles.projectYear}>{project.year}</span>
         </div>
-            <p className={styles.projectDescription}>{project.description}</p>
+            <ul className={styles.projectDescriptionList}>
+              {project.description.map((point, pointIndex) => (
+                <li key={pointIndex} className={styles.projectDescriptionItem}>{point}</li>
+              ))}
+            </ul>
             <div className={styles.techStack}>
               {project.tech.map((tech, techIndex) => (
                 <React.Fragment key={techIndex}>

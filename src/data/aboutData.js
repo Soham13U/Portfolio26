@@ -1,51 +1,84 @@
 export const aboutData = {
   name: "Soham Upadeo",
-  title: "Creative Developer & Designer",
-  bio: "I'm a passionate developer who loves creating beautiful, functional experiences. With a background in both design and development, I bridge the gap between aesthetics and functionality.I'm a passionate developer who loves creating beautiful, functional experiences. With a background in both design and development, I bridge the gap between aesthetics and functionality.I'm a passionate developer who loves creating beautiful, functional experiences. With a background in both design and development, I bridge the gap between aesthetics and functionality.",
+  title: "Software Engineer",
+  bio: [
+    "Passionate developer creating beautiful, functional experiences",
+    "Bridging the gap between aesthetics and functionality",
+    "Focused on clean code and user-centered design"
+  ],
   location: "India",
   email: "sohamup13@gmail.com",
   skills: [
     "React",
     "TypeScript",
     "Node.js",
-    "UI/UX Design",
-    "Framer Motion",
-    "Three.js",
-    "WebGL",
-    "CSS/SCSS",
-    "Figma",
-    "Illustration"
+    "NextJS",
+    "Python",
+    "Django",
+    "MongoDB",
+    "PostgreSQL",
+    "Unity",
+    "C#",
+    "C++",
+    "Git",
+    "GitHub",
+    "Docker"
   ],
   experience: [
     {
-      role: "Senior Frontend Developer",
-      company: "Tech Innovations Inc.",
-      period: "2021 - Present",
-      description: "Leading frontend development for multiple client projects, focusing on performance and user experience."
+      role: "Consultant / SDE",
+      company: "TipTop Technologies",
+      location: "Remote - USA",
+      period: "Dec 2025 - Present",
+      description: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+      ]
     },
     {
-      role: "Full Stack Developer",
-      company: "Creative Agency",
-      period: "2019 - 2021",
-      description: "Developed and maintained web applications using React and Node.js, collaborating with designers to implement pixel-perfect UIs."
+      role: "Unity Developer",
+      company: "RebeccaEverlene",
+      location: "Remote - USA",
+      period: "Sep 2024 - Jun 2025",
+      description: [
+        "Designed core gameplay mechanics using Unity Engine for Landmarks, a 3rd-person travel-based virtual pet management game featuring educational and trivia elements",
+        "Developed Landmark and Question types to enrich player experience and a rewards and penalty system in C#",
+        "Enhanced player engagement and incentivized correct actions through systematic game design"
+      ]
     },
     {
-      role: "Junior Developer",
-      company: "StartupXYZ",
-      period: "2017 - 2019",
-      description: "Built responsive web applications and learned modern web development practices."
+      role: "Teaching Assistant",
+      company: "Washington University in St. Louis",
+      location: "St. Louis, MO",
+      period: "Aug 2023 - Dec 2023",
+      description: [
+        "Mentored 20+ students weekly on Unity game development fundamentals",
+        "Clarified complex concepts such as physics, AI behavior, and UI design",
+        "Improved student comprehension by 30% through personalized guidance"
+      ]
+    },{
+      role: "Software Engineering Intern",
+      company: "August Code Pvt. Ltd.",
+      location: "Remote - Surat , India",
+      period: "Jan 2022 - Jun 2022",
+      description: [
+        "Built a responsive personal-finance web app with Django, Python, HTML, CSS, and Bootstrap for real-time expense,income, and budget tracking.",
+        "Added authentication, analytics with interactive graphics, categorized expense tracking, and data export (CSV, Excel,PDF), improving insights by 35% and reducing unauthorized access by 90%.",
+      ]
     }
   ],
   education: [
     {
-      degree: "Bachelor of Science in Computer Science",
-      university: "University of California, Berkeley",
-      year: "2017"
+      degree: "M.S. in Computer Science",
+      university: "Washington University in St. Louis",
+      gpa: "3.33/4.0",
+      year: "Aug 2022 - May 2024"
     },
     {
-      degree: "Master of Science in Software Engineering",
-      university: "Stanford University",
-      year: "2019"
+      degree: "B.Tech in Computer Engineering",
+      university: "Charotar University of Science and Technology",
+      gpa: "9.06/10",
+      year: "Aug 2018 - Jun 2022"
     }
   ]
 };

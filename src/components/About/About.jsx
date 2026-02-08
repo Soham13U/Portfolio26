@@ -61,7 +61,7 @@ const About = () => {
         <p className={styles.title}>{aboutData.title}</p>
         <div className={styles.photoContainer}>
           <img 
-            src="/Soham.jpg" 
+            src={`${import.meta.env.BASE_URL}Soham.jpg`} 
             alt={aboutData.name}
             className={styles.photo}
           />
@@ -71,7 +71,11 @@ const About = () => {
       <AnimatedSection className={styles.section}>
         <div data-section-title="About">
           <h4 className={styles.sectionTitle}>About</h4>
-        <p className={styles.bio}>{aboutData.bio}</p>
+        <ul className={styles.bioList}>
+          {aboutData.bio.map((point, index) => (
+            <li key={index} className={styles.bioItem}>{point}</li>
+          ))}
+        </ul>
         <div className={styles.info}>
           <div className={styles.infoItem}>
             <span className={styles.infoLabel}>Location</span>
@@ -111,7 +115,12 @@ const About = () => {
               <span className={styles.period}>{exp.period}</span>
             </div>
             <p className={styles.company}>{exp.company}</p>
-            <p className={styles.description}>{exp.description}</p>
+            {exp.location && <p className={styles.location}>{exp.location}</p>}
+            <ul className={styles.descriptionList}>
+              {exp.description.map((point, pointIndex) => (
+                <li key={pointIndex} className={styles.descriptionItem}>{point}</li>
+              ))}
+            </ul>
           </div>
         ))}
         </div>
@@ -124,6 +133,7 @@ const About = () => {
           <div key={index} className={styles.education}>
             <p className={styles.degree}>{edu.degree}</p>
             <p className={styles.university}>{edu.university}</p>
+            {edu.gpa && <p className={styles.gpa}>GPA: {edu.gpa}</p>}
             <p className={styles.year}>{edu.year}</p>
           </div>
         ))}
