@@ -134,7 +134,7 @@ function App() {
             className={styles.subtitle}
             variants={itemVariants}
           >
-            Software Developer
+            Software Engineer
           </motion.p>
 
           {/* Navigation Links */}

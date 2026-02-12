@@ -70,13 +70,13 @@ export const aboutData = {
   education: [
     {
       degree: "M.S. in Computer Science",
-      university: "Washington University in St. Louis",
+      university: "Washington University in St. Louis, USA",
       gpa: "3.33/4.0",
       year: "Aug 2022 - May 2024"
     },
     {
       degree: "B.Tech in Computer Engineering",
-      university: "Charotar University of Science and Technology",
+      university: "Charotar University of Science and Technology, India",
       gpa: "9.06/10",
       year: "Aug 2018 - Jun 2022"
     }
