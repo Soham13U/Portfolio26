@@ -92,14 +92,24 @@ const About = () => {
       <AnimatedSection className={styles.section}>
         <div data-section-title="Skills">
           <h4 className={styles.sectionTitle}>Skills</h4>
-        <div className={styles.skillsList}>
-          {aboutData.skills.map((skill, index) => (
-            <React.Fragment key={index}>
-              <span className={styles.skillItem}>{skill}</span>
-              {index < aboutData.skills.length - 1 && (
-                <span className={styles.separator}>/</span>
-              )}
-            </React.Fragment>
+        <div className={styles.skillsContainer}>
+          {Object.entries(aboutData.skills).map(([category, skills], categoryIndex) => (
+            <div key={categoryIndex} className={styles.skillGroup}>
+              <span className={styles.skillCategory}>{category}</span>
+              <span className={styles.skillDash}>-</span>
+              <span className={styles.skillBracket}>[</span>
+              <div className={styles.skillsList}>
+                {skills.map((skill, skillIndex) => (
+                  <React.Fragment key={skillIndex}>
+                    <span className={styles.skillItem}>{skill}</span>
+                    {skillIndex < skills.length - 1 && (
+                      <span className={styles.separator}>/</span>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
+              <span className={styles.skillBracket}>]</span>
+            </div>
           ))}
         </div>
         </div>
@@ -131,10 +141,12 @@ const About = () => {
           <h4 className={styles.sectionTitle}>Education</h4>
         {aboutData.education.map((edu, index) => (
           <div key={index} className={styles.education}>
-            <p className={styles.degree}>{edu.degree}</p>
+            <div className={styles.educationHeader}>
+              <h5 className={styles.degree}>{edu.degree}</h5>
+              <span className={styles.year}>{edu.year}</span>
+            </div>
             <p className={styles.university}>{edu.university}</p>
             {edu.gpa && <p className={styles.gpa}>GPA: {edu.gpa}</p>}
-            <p className={styles.year}>{edu.year}</p>
           </div>
         ))}
         </div>

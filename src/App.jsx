@@ -100,6 +100,7 @@ function App() {
               className={styles.mainTitle}
               onClick={() => openContentHandler(null)}
               style={{ cursor: 'none' }}
+              data-clickable="true"
             >
               <span className={styles.titleWrapper}>
                 {firstNameArray.map((letter, i) => (

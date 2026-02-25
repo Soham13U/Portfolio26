@@ -3,16 +3,18 @@ import { motion, useInView } from 'framer-motion';
 import { playgroundData } from '../../data/playgroundData';
 import styles from './Playground.module.css';
 
-const getStatusColor = (status) => {
-  switch (status) {
-    case 'Completed':
-      return '#4caf50';
-    case 'Ongoing':
-      return '#ff9800';
-    case 'In Progress':
+const getTypeColor = (type) => {
+  switch (type) {
+    case 'Web App':
       return '#2196f3';
-    case 'Experimental':
+    case 'Game':
+      return '#ff9800';
+    case 'Bot':
       return '#9c27b0';
+    case 'IoT':
+      return '#4caf50';
+    case 'Simulation':
+      return '#00bcd4';
     default:
       return '#8a8a8a';
   }
@@ -56,11 +58,11 @@ const PlaygroundCard = ({ item, index }) => {
         <span 
           className={styles.statusBadge}
           style={{ 
-            borderColor: getStatusColor(item.status),
-            color: getStatusColor(item.status)
+            borderColor: getTypeColor(item.type),
+            color: getTypeColor(item.type)
           }}
         >
-          {item.status}
+          {item.type}
         </span>
       </div>
       <p className={styles.cardDescription}>{item.description}</p>

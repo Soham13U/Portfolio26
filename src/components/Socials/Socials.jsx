@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './Socials.module.css';
+import { aboutData } from '../../data/aboutData';
 
 const Socials = () => {
   const socialLinks = [
     { name: 'GitHub', url: 'https://github.com/Soham13U' },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/soham-upadeo/' },
     { name: 'Medium', url: 'https://medium.com/@xoham13' },
-    
+    { name: 'Resume', url: aboutData.resume },
     { name: 'Email', url: 'mailto:sohamup13@gmail.com' },
   ];
 

@@ -6,7 +6,7 @@ export const playgroundData = [
     tech: ["HTML", "CSS", "JS"],
     github: "",
     live: "",
-    status: "Completed",
+    type: "Web App",
     image: "https://placehold.co/600x400/FF5733/FFFFFF"
   },
   {
@@ -16,7 +16,7 @@ export const playgroundData = [
     tech: ["HTML", "CSS", "React", "TypeScript"],
     github: "https://github.com/Soham13U/Naruto-connections",
     live: "https://soham13u.github.io/Naruto-connections/",
-    status: "Completed",
+    type: "Game",
     image: "https://placehold.co/600x400/33FF57/FFFFFF"
   },
   {
@@ -26,7 +26,7 @@ export const playgroundData = [
     tech: ["C#", "Unity"],
     github: "https://github.com/Soham13U/DodgeTheMine",
     live: "",
-    status: "Completed",
+    type: "Game",
     image: "https://placehold.co/600x400/3357FF/FFFFFF"
   },
   {
@@ -36,7 +36,7 @@ export const playgroundData = [
     tech: ["HTML", "CSS", "JS", "Python"],
     github: "https://github.com/Soham13U/Expense-Tracker",
     live: "",
-    status: "Completed",
+    type: "Web App",
     image: "https://placehold.co/600x400/FF33A8/FFFFFF"
   },
   {
@@ -46,7 +46,7 @@ export const playgroundData = [
     tech: ["Python"],
     github: "https://github.com/Soham13U/RyuBot",
     live: "",
-    status: "Completed",
+    type: "Bot",
     image: "https://placehold.co/600x400/A833FF/FFFFFF"
   },
   {
@@ -56,7 +56,7 @@ export const playgroundData = [
     tech: ["C#", "Unity"],
     github: "https://github.com/OchreMarsh/Sorasu",
     live: "",
-    status: "Completed",
+    type: "Game",
     image: "https://placehold.co/600x400/33FFF3/FFFFFF"
   },
   {
@@ -66,7 +66,7 @@ export const playgroundData = [
     tech: ["C#", "Unity"],
     github: "https://github.com/OchreMarsh/FooBar",
     live: "",
-    status: "Completed",
+    type: "Game",
     image: "https://placehold.co/600x400/FF8C33/FFFFFF"
   },
   {
@@ -76,7 +76,7 @@ export const playgroundData = [
     tech: ["HTML", "CSS", "JS"],
     github: "https://github.com/Soham13U/Covid19_dashboard",
     live: "",
-    status: "Completed",
+    type: "Web App",
     image: "https://placehold.co/600x400/338CFF/FFFFFF"
   }
 ];

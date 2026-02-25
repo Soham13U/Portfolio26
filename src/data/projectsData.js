@@ -9,7 +9,7 @@ export const projectsData = [
       "Conducted rigorous Bluetooth testing (50+ trials on RSSI, distance, and obstructions) that reduced connection failures by 25%"
     ],
     tech: ["IoT", "HTML", "CSS", "JS", "Python"],
-    image: "/img1.jpg",
+    image: "/img1.png",
     github: "https://github.com/Kai-WashU/CSE521S",
     live: "",
     year: "2023"
@@ -40,7 +40,7 @@ export const projectsData = [
       "Integrated graph modules for enhanced data visualization and real-time stock tracking"
     ],
     tech: ["HTML", "CSS", "JS", "Python", "Django"],
-    image: "/img3.jpg",
+    image: "/img3.png",
     github: "https://github.com/Soham13U/StockMarket_Analysis",
     live: "https://stock-analysis.com",
     year: "2021"

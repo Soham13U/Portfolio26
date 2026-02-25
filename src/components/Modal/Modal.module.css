@@ -48,7 +48,7 @@
 }
 
 .title {
-  font-size: 0.875rem;
+  font-size: var(--font-size-page-title);
   font-weight: 400;
   color: var(--text-secondary);
   text-transform: uppercase;
@@ -58,7 +58,7 @@
 }
 
 .description {
-  font-size: 0.8125rem;
+  font-size: var(--font-size-body-sm);
   font-weight: 300;
   color: var(--text-tertiary);
   font-family: 'Inter', sans-serif;
@@ -124,10 +124,6 @@
 
   .header {
     padding: 1.5rem 2rem;
-  }
-
-  .title {
-    font-size: 0.8rem;
   }
 
   .content {

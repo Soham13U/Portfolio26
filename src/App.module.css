@@ -136,7 +136,7 @@
 }
 
 .subtitle {
-  font-size: clamp(0.75rem, 1.2vw, 0.9375rem);
+  font-size: var(--font-size-body-sm);
   color: var(--text-secondary);
   font-weight: 400;
   letter-spacing: 0.15em;
@@ -206,7 +206,7 @@
 }
 
 .navLabel {
-  font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
+  font-size: var(--font-size-body-lg);
   color: var(--text-primary);
   font-weight: 400;
   letter-spacing: 0.05em;
@@ -319,7 +319,7 @@
 }
 
 .portfolioText {
-  font-size: clamp(0.6875rem, 1vw, 0.8125rem);
+  font-size: var(--font-size-small);
   color: var(--text-tertiary);
   opacity: 0.5;
   font-family: 'JetBrains Mono', monospace;
@@ -329,7 +329,7 @@
 }
 
 .yearText {
-  font-size: clamp(0.6875rem, 1vw, 0.8125rem);
+  font-size: var(--font-size-small);
   color: var(--text-tertiary);
   opacity: 0.5;
   font-family: 'JetBrains Mono', monospace;
@@ -416,9 +416,5 @@
 
   .navItem {
     padding: 0.75rem 1.25rem;
-  }
-
-  .navLabel {
-    font-size: 0.875rem;
   }
 }

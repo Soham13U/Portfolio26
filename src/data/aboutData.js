@@ -6,24 +6,24 @@ export const aboutData = {
     "Bridging the gap between aesthetics and functionality",
     "Focused on clean code and user-centered design"
   ],
+  welcomeDescription: "A software engineer passionate about creating elegant solutions that bridge the gap between aesthetics and functionality.",
+  briefHistory: [
+    { year: "2018", description: "Started B.Tech in Computer Engineering" },
+    { year: "2022", description: "Started M.S. in Computer Science" },
+    { year: "2024", description: "Unity Developer" },
+    { year: "2025", description: "SDE at TipTop" }
+  ],
   location: "India",
   email: "sohamup13@gmail.com",
-  skills: [
-    "React",
-    "TypeScript",
-    "Node.js",
-    "NextJS",
-    "Python",
-    "Django",
-    "MongoDB",
-    "PostgreSQL",
-    "Unity",
-    "C#",
-    "C++",
-    "Git",
-    "GitHub",
-    "Docker"
-  ],
+  resume: "#",
+  skills: {
+    "Frontend": ["React", "TypeScript", "NextJS"],
+    "Backend": ["Node.js", "Python", "Django"],
+    "Databases": ["MongoDB", "PostgreSQL"],
+    "Game Dev": ["Unity", "C#"],
+    "Languages": ["C++","JavaScript"],
+    "Tools": ["Git", "GitHub", "Docker"]
+  },
   experience: [
     {
       role: "Consultant / SDE",

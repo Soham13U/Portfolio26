@@ -35,11 +35,29 @@ const CustomCursor = () => {
 
     const handleMouseOver = (e) => {
       const target = e.target;
-      if (target.matches('button, a, [role="button"], .navItem, .socialLink, .cycler')) {
-        setIsHovering(true);
-      } else {
-        setIsHovering(false);
-      }
+      
+      // Check if target or any parent has data-clickable attribute or mainTitle class
+      const hasClickableAttribute = target.matches('[data-clickable]') || 
+                                    target.closest('[data-clickable]') !== null;
+      
+      // Check if target or any parent has mainTitle class (for the heading)
+      const mainTitleElement = target.closest('h1.mainTitle');
+      const hasMainTitle = target.matches('.mainTitle') || 
+                          target.matches('.letter') ||
+                          mainTitleElement !== null;
+      
+      // Check for other clickable elements
+      const isClickable = 
+        target.matches('button, a, [role="button"]') ||
+        target.closest('button, a, [role="button"]') ||
+        target.matches('.navItem, .socialLink, .cycler, .projectLink, .progressItem') ||
+        target.closest('.navItem, .socialLink, .cycler, .projectLink, .progressItem') ||
+        hasClickableAttribute ||
+        hasMainTitle ||
+        window.getComputedStyle(target).cursor === 'pointer' ||
+        (target.closest('*') && window.getComputedStyle(target.closest('*')).cursor === 'pointer');
+      
+      setIsHovering(isClickable);
     };
 
     window.addEventListener('mousemove', updateCursor);
@@ -66,15 +84,13 @@ const CustomCursor = () => {
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
-          transform: 'translate(-50%, -50%)',
         }}
       />
       <div
-        className="cursor-follower"
+        className={`cursor-follower ${isHovering ? 'hover' : ''}`}
         style={{
           left: `${followerPosition.x}px`,
           top: `${followerPosition.y}px`,
-          transform: 'translate(-50%, -50%)',
         }}
       />
     </>

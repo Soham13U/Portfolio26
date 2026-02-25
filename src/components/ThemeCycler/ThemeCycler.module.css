@@ -14,7 +14,7 @@
   z-index: 100;
   padding: 0.5rem 0;
   font-family: 'JetBrains Mono', monospace;
-  font-size: clamp(0.6875rem, 1vw, 0.8125rem);
+  font-size: var(--font-size-small);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   opacity: 0.6;
@@ -43,10 +43,6 @@
 }
 
 @media (max-width: 768px) {
-  .cycler {
-    font-size: clamp(0.625rem, 2vw, 0.75rem);
-  }
-
   .colorDot {
     width: 5px;
     height: 5px;

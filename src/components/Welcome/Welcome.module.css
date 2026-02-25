@@ -6,16 +6,102 @@
   width: 100%;
 }
 
-/* Quote Section */
-.quoteSection {
+/* Two-Column Layout */
+.welcomeContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px;
   margin-bottom: 4rem;
+  align-items: start;
+}
+
+/* Left Column - Description Stack */
+.descriptionColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.developerDescription {
+  font-size: var(--font-size-heading-lg);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+}
+
+/* Brief History Block */
+.historyBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.historyTitle {
+  font-size: var(--font-size-section-title);
+  font-weight: 400;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+  opacity: 0.7;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.timelineYear {
+  font-size: var(--font-size-section-title);
+  font-weight: 400;
+  color: var(--text-tertiary);
+  font-family: 'JetBrains Mono', monospace;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+
+.timelineDash {
+  font-size: var(--font-size-section-title);
+  color: var(--text-tertiary);
+  opacity: 0.5;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.timelineDescription {
+  font-size: var(--font-size-body-md);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  letter-spacing: -0.01em;
+  font-family: 'DM Sans', sans-serif;
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Hobbies */
+.hobbiesBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 /* Section Labels */
 .sectionLabel {
-  font-size: clamp(0.6875rem, 1vw, 0.8125rem);
+  font-size: var(--font-size-small);
   color: var(--text-tertiary);
   font-weight: 400;
   letter-spacing: 0.05em;
@@ -23,91 +109,267 @@
   font-family: 'JetBrains Mono', monospace;
   margin: 0 0 1rem 0;
   opacity: 0.7;
-  text-align: center;
+  text-align: left;
 }
 
-/* When Online Section */
-.onlineSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 3rem;
-}
-
-.onlineItems {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.onlineItem {
-  font-size: clamp(0.8125rem, 1.1vw, 0.9375rem);
+.hobbiesLine {
+  font-size: var(--font-size-body-sm);
   color: var(--text-secondary);
   font-weight: 300;
   font-family: 'DM Sans', sans-serif;
+  text-align: left;
 }
 
-/* When Offline Section */
-.offlineSection {
+/* Right Column - Enhanced Info Panel */
+.panelColumn {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.infoPanel {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
+  gap: 1.5rem;
+  padding: 2rem 2.25rem;
+  border-radius: 0;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  box-shadow: 0 14px 35px var(--shadow);
+  max-width: 340px;
   width: 100%;
-  max-width: 600px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: terminalGlow 4s ease-in-out infinite;
 }
 
-.offlineItems {
+.infoPanel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.3;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.infoPanel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(var(--accent-rgb, 217, 119, 87), 0.02) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+  animation: terminalScan 6s ease-in-out infinite;
+}
+
+.infoPanel:hover {
+  box-shadow: 0 20px 45px var(--shadow-hover);
+  border-color: var(--accent);
+  animation: terminalGlowHover 2s ease-in-out infinite;
+}
+
+.infoPanel:hover::before {
+  opacity: 0.6;
+}
+
+.infoRow {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  gap: 0.375rem;
+  position: relative;
 }
 
-.offlineItem {
-  font-size: clamp(0.8125rem, 1.1vw, 0.9375rem);
-  color: var(--text-secondary);
-  font-weight: 300;
-  font-family: 'DM Sans', sans-serif;
-}
-
-.separator {
-  font-size: clamp(0.8125rem, 1.1vw, 0.9375rem);
+.infoLabel {
+  font-size: var(--font-size-small);
   color: var(--text-tertiary);
-  opacity: 0.4;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-family: 'JetBrains Mono', monospace;
+  opacity: 0.8;
+}
+
+.infoValue {
+  font-size: var(--font-size-body-md);
+  color: var(--text-primary);
+  font-weight: 400;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
+
+/* Typing Animation */
+.typingText {
+  display: inline-block;
+  position: relative;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--accent);
+  margin-left: 2px;
+  animation: blinkCursor 1s step-end infinite;
+  vertical-align: baseline;
+}
+
+/* Hobbies Section - Vertical List */
+.hobbiesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.hobbiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hobbyItem {
+  font-size: var(--font-size-body-md);
+  color: var(--text-secondary);
+  font-weight: 300;
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: default;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.hobbyItem::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--text-tertiary);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.hobbyItem:hover::before {
+  color: var(--accent);
+  opacity: 1;
+}
+
+/* Terminal-like Animations */
+@keyframes terminalGlow {
+  0%, 100% {
+    box-shadow: 0 14px 35px var(--shadow);
+    border-color: var(--border-color);
+  }
+  50% {
+    box-shadow: 0 14px 35px var(--shadow), 0 0 20px rgba(var(--accent-rgb, 217, 119, 87), 0.1);
+    border-color: var(--border-color);
+  }
+}
+
+@keyframes terminalGlowHover {
+  0%, 100% {
+    box-shadow: 0 20px 45px var(--shadow-hover);
+  }
+  50% {
+    box-shadow: 0 20px 45px var(--shadow-hover), 0 0 30px rgba(var(--accent-rgb, 217, 119, 87), 0.15);
+  }
+}
+
+@keyframes terminalScan {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes blinkCursor {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0.3;
+  }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .quoteSection {
+  .welcomeContent {
+    grid-template-columns: 1fr;
+    gap: 3rem;
     margin-bottom: 3rem;
   }
 
-  .onlineSection {
-    margin-bottom: 2.5rem;
+  .descriptionColumn {
+    order: 1;
   }
 
-  .onlineItem {
-    font-size: clamp(0.75rem, 3vw, 0.875rem);
+  .panelColumn {
+    order: 2;
+    justify-content: flex-start;
   }
 
-  .offlineItem {
-    font-size: clamp(0.75rem, 3vw, 0.875rem);
+  .infoPanel {
+    max-width: none;
+    width: 100%;
+    padding: 1.75rem 2rem;
+    gap: 1.25rem;
+  }
+
+  .hobbiesList {
+    gap: 0.375rem;
+  }
+
+  .hobbyItem {
+    font-size: var(--font-size-body-sm);
   }
 }
 
 @media (max-width: 480px) {
-  .quoteSection {
+  .welcomeContent {
+    gap: 2.5rem;
     margin-bottom: 2.5rem;
   }
 
-  .onlineSection {
-    margin-bottom: 2rem;
+  .infoPanel {
+    padding: 1.5rem 1.75rem;
+    gap: 1rem;
+  }
+
+  .hobbiesList {
+    gap: 0.3rem;
   }
 }
