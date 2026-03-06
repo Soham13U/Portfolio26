@@ -3,6 +3,12 @@ import { motion, useInView } from 'framer-motion';
 import { playgroundData } from '../../data/playgroundData';
 import styles from './Playground.module.css';
 
+const getImageSrc = (image) => {
+  if (!image) return '';
+  if (/^https?:\/\//i.test(image)) return image;
+  return `${import.meta.env.BASE_URL}${String(image).replace(/^\//, '')}`;
+};
+
 const getTypeColor = (type) => {
   switch (type) {
     case 'Web App':
@@ -47,7 +53,7 @@ const PlaygroundCard = ({ item, index }) => {
     >
       {item.image && (
         <div className={styles.playgroundImage}>
-          <img src={item.image} alt={item.title} />
+          <img src={getImageSrc(item.image)} alt={item.title} />
         </div>
       )}
       <div className={styles.cardHeader}>
