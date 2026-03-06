@@ -1,6 +1,24 @@
 export const projectsData = [
   {
     id: 1,
+    title: "Knowledge Base",
+    description: [
+      "Built a full-stack knowledge management web application inspired by Zettelkasten using Next.js, React, Tailwind, Prisma, and PostgreSQL",
+      "Implemented CRUD operations for notes with support for multi-tag assignment and bidirectional note linking via self-referencing relations",
+      "Designed a relational schema with many-to-many and graph relationships using Prisma join tables",
+      "Developed search and tag-based filtering features to efficiently query and organize notes",
+      "Built an analytics dashboard with 7-day and 30-day activity insights for note creation and updates",
+      "Deployed the production application on Vercel with Neon PostgreSQL, using Docker for consistent local development"
+    ],
+    tech: ["NextJS", "Tailwind", "JS","Prisma","PostgreSQL","Docker","Vercel"],
+    image: "/kb.png",
+    github: "https://github.com/Soham13U/KnowledgeBase",
+    live: "https://kb-rouge.vercel.app/",
+    year: "2026"
+  },
+  
+  {
+    id: 2,
     title: "Smart Kitchen Assistant",
     description: [
       "A smart kitchen assistant in Python for individuals with subjective cognitive decline, specifically supporting oatmeal preparation",
@@ -14,23 +32,7 @@ export const projectsData = [
     live: "",
     year: "2023"
   },
-  {
-    id: 2,
-    title: "Anime Realm",
-    description: [
-      "Full-stack anime review website using React, Express.js, and MongoDB with fully responsive UI",
-      "Implemented secure JWT-based authentication with 99% uptime and complete CRUD functionalities",
-      "Boosted performance by 40% and increased content flexibility by 50% through optimized architecture",
-      "Integrated JikanAPI to improve search and browsing efficiency by 35%",
-      "Optimized database queries, reducing query times by 30%",
-      "Added user review capabilities that enhanced community engagement"
-    ],
-    tech: ["HTML", "CSS", "React", "Express", "MongoDB"],
-    image: "/img2.jpg",
-    github: "https://github.com/Soham13U/AnimeRealm",
-    live: "",
-    year: "2023"
-  },
+ 
   {
     id: 3,
     title: "Stock Market Analysis",
@@ -42,7 +44,7 @@ export const projectsData = [
     tech: ["HTML", "CSS", "JS", "Python", "Django"],
     image: "/img3.png",
     github: "https://github.com/Soham13U/StockMarket_Analysis",
-    live: "https://stock-analysis.com",
+    live: "",
     year: "2021"
   }
 ];

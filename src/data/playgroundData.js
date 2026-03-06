@@ -5,9 +5,9 @@ export const playgroundData = [
     description: "Personal portfolio website",
     tech: ["HTML", "CSS", "JS"],
     github: "",
-    live: "",
+    live: "https://soham-upadeo.netlify.app/",
     type: "Web App",
-    image: "https://placehold.co/600x400/FF5733/FFFFFF"
+    image: "/portfolio1.png"
   },
   {
     id: 2,
@@ -17,37 +17,37 @@ export const playgroundData = [
     github: "https://github.com/Soham13U/Naruto-connections",
     live: "https://soham13u.github.io/Naruto-connections/",
     type: "Game",
-    image: "https://placehold.co/600x400/33FF57/FFFFFF"
+    image: "/narutoconnections.png"
   },
   {
     id: 3,
-    title: "Dodgethemine",
-    description: "An 'endless runner' game where the player has to survive as long as possible to get more points.",
-    tech: ["C#", "Unity"],
-    github: "https://github.com/Soham13U/DodgeTheMine",
-    live: "",
+    title: "One Piece Connections",
+    description: "A web based puzzle game where you have to identify four groups of four One Piece characters that share a hidden connection such as crew, role, ability, or origin before you run out of mistakes.",
+    tech: ["Typescript", "CSS","NextJS"],
+    github: "https://github.com/Soham13U/OnePiece-connections",
+    live: "https://soham13u.github.io/OnePiece-connections/",
     type: "Game",
-    image: "https://placehold.co/600x400/3357FF/FFFFFF"
+    image: "/onepiececonnections.png"
   },
   {
     id: 4,
-    title: "Expense Tracker",
-    description: "Web application to manage your expenses",
-    tech: ["HTML", "CSS", "JS", "Python"],
-    github: "https://github.com/Soham13U/Expense-Tracker",
+    title: "FocusFlow",
+    description: "A Pomodoro-style productivity web application. FocusFlow helps users run structured focus sessions, tag their work, log completed sessions, and analyze productivity trends through lightweight reports.",
+    tech: ["NextJS", "Prisma", "SQLite", "Typescript","Tailwind"],
+    github: "https://github.com/Soham13U/FocusFlow",
     live: "",
     type: "Web App",
-    image: "https://placehold.co/600x400/FF33A8/FFFFFF"
+    image: "/focusflow.png"
   },
   {
     id: 5,
-    title: "Ryubot",
-    description: "User friendly anime related discord bot",
-    tech: ["Python"],
-    github: "https://github.com/Soham13U/RyuBot",
+    title: "Locked-In-Extension",
+    description: "A Chrome extension that replaces distracting sites with motivational overlays.",
+    tech: ["Javascript","CSS"],
+    github: "https://github.com/Soham13U/Locked-In-Extension",
     live: "",
-    type: "Bot",
-    image: "https://placehold.co/600x400/A833FF/FFFFFF"
+    type: "Extension",
+    image: "/lockedin.png"
   },
   {
     id: 6,
@@ -55,9 +55,9 @@ export const playgroundData = [
     description: "2D platformer game with deflection mechanic",
     tech: ["C#", "Unity"],
     github: "https://github.com/OchreMarsh/Sorasu",
-    live: "",
+    live: "https://ochremarsh.itch.io/sorasu",
     type: "Game",
-    image: "https://placehold.co/600x400/33FFF3/FFFFFF"
+    image: "/sorasu.png"
   },
   {
     id: 7,
@@ -65,18 +65,18 @@ export const playgroundData = [
     description: "2 player 3-D puzzle escape game",
     tech: ["C#", "Unity"],
     github: "https://github.com/OchreMarsh/FooBar",
-    live: "",
+    live: "https://ochremarsh.itch.io/foobar",
     type: "Game",
     image: "https://placehold.co/600x400/FF8C33/FFFFFF"
   },
   {
     id: 8,
-    title: "Covid-19 Dashboard",
-    description: "A dashboard depicting data analysis and visualization of COVID-19 cases in different states of India.",
-    tech: ["HTML", "CSS", "JS"],
-    github: "https://github.com/Soham13U/Covid19_dashboard",
-    live: "",
-    type: "Web App",
-    image: "https://placehold.co/600x400/338CFF/FFFFFF"
+    title: "RefleXle",
+    description: "RefleXle is a Wordle-inspired logic game. It adds a twist: you don’t type guesses, you analyze feedback patterns to deduce the hidden word logically",
+    tech: ["React", "Tailwind","Typescript"],
+    github: "https://github.com/Soham13U/RefleXle",
+    live: "https://soham13u.github.io/RefleXle/",
+    type: "Game",
+    image: "/reflexle.png"
   }
 ];
