@@ -31,9 +31,9 @@ export const aboutData = {
       location: "Remote - USA",
       period: "Dec 2025 - Present",
       description: [
-        "Contributing to the development of News360, an all-round news insights web app powered by TipTop's Solr indices with 100+ language support.",
-        "Working closely with the team to build reliable, user-focused solutions and support ongoing platform enhancements.",
-        "Using AI tools selectively to accelerate research and prototyping, while relying on strong engineering judgment for architecture, implementation, and final quality."
+        "Contributing to the development of News360, an all-round news insights web app powered by TipTop's Solr indices with 100+ language support",
+        "Working closely with the team to build reliable, user-focused solutions and support ongoing platform enhancements",
+        "Using AI tools selectively to accelerate research and prototyping, while relying on strong engineering judgment for architecture, implementation, and final quality"
       ]
     },
     {
