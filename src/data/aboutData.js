@@ -2,9 +2,9 @@ export const aboutData = {
   name: "Soham Upadeo",
   title: "Software Engineer",
   bio: [
-    "Passionate developer creating beautiful, functional experiences",
-    "Bridging the gap between aesthetics and functionality",
-    "Focused on clean code and user-centered design"
+    "I’m a software engineer with a practical, detail-oriented approach to building software.",
+    "I focus on delivering work that is clean, dependable, and aligned with user needs.",
+    "I thrive in collaborative environments where thoughtful design and solid engineering come together."
   ],
   welcomeDescription: "A software engineer passionate about creating elegant solutions that bridge the gap between aesthetics and functionality.",
   briefHistory: [
@@ -31,8 +31,9 @@ export const aboutData = {
       location: "Remote - USA",
       period: "Dec 2025 - Present",
       description: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+        "Contributing to the development of News360, an all-round news insights web app powered by TipTop's Solr indices with 100+ language support.",
+        "Working closely with the team to build reliable, user-focused solutions and support ongoing platform enhancements.",
+        "Using AI tools selectively to accelerate research and prototyping, while relying on strong engineering judgment for architecture, implementation, and final quality."
       ]
     },
     {
